@@ -12,7 +12,7 @@ Sistema de Eventos encomendado pela Morena.
 6. Execute os testes
 
 ```console
-git clone git@github.com:henriquebastos/eventex.git wttd
+git clone git@github.com:mrcadu7/WTTD.git
 cd wttd
 python -m venv .wttd
 source .wttd/bin/activate
@@ -21,7 +21,9 @@ cp contrib/env-sample .env
 python manage.py test
 ```
 
-## Como fazer o deploy?
+## Como fazer o deploy? 
+
+*Infelizmente o Heroku não é mais gratuito*
 
 1. Crie uma instância no Heroku (R.I.P)
 2. Envie as configurações para o Heroku
