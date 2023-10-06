@@ -1,84 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de Inscrição</title>
-    <style>
-        /* Estilos padrão */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+{% extends 'base.html' %}
 
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-        }
+{% block content %}
+<!-- OVERVIEW -->
+        <section>
+            <div class="content row padding-bottom-3 desktop-12 container">
+                <h1>Obrigado por se inscrever!</h1>
+                <div class="desktop-6">
+                	<p>Estes foram os dados que você nos forneceu em sua inscrição:</p>
 
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+					<ul>
+						<li>Nome: {{ subscription.name }}</li>
+						<li>CPF: {{ subscription.cpf }}</li>
+						<li>Email: {{ subscription.email }}</li>
+						<li>Telefone: {{ subscription.phone }}</li>
+					</ul>
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+					<p>Em até 48 horas úteis, a nossa equipe entrará em contato com vocie para concluirmos a sua matrícula.</p>
 
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .back-to-home {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .back-to-home a {
-            text-decoration: none;
-            background-color: #007BFF;
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 3px;
-            transition: background-color 0.3s;
-        }
-
-        .back-to-home a:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Confirmação de Inscrição</h1>
-    
-    <section>
-        <div class="content">
-            <h1>Obrigada por se inscrever!</h1>
-            <div>
-                <p>Estes foram os dados que você forneceu em sua inscrição:</p>
-
-                <ul>
-                    <li>Nome: {{ subscription.name }}</li>
-                    <li>CPF: {{ subscription.cpf }}</li>
-                    <li>Email: {{ subscription.email }}</li>
-                    <li>Telefone: {{ subscription.phone }}</li>
-                </ul>
-                
-                <p>Em até 48 horas úteis, a nossa equipe entrará em contato com você para concluirmos a sua matrícula.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <div class="back-to-home">
-        <a href="/">Voltar à Página Principal</a>
-    </div>
-</body>
-</html>
+        </section>
+{% endblock content %}

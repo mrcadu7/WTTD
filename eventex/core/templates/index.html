@@ -35,7 +35,7 @@
 	<body>
 
         <div class="header-frame header-frame-absolute  row">
-            {% include 'nav.html' only%}
+            {% include 'nav.html' only %}
         </div>
 
       	<!-- TOP -->
@@ -61,7 +61,7 @@
                 <h2>Palestrantes Convidados</h2>
                 {% for speaker in speaker_list %}
                 <div class="desktop-4">
-                    <img src="{{ speaker.photo }}">
+                    <img src="{{ speaker.photo }}"/>
                     <h4>
                         <a href="{{ speaker.get_absolute_url }}">
                             {{ speaker.name }}
